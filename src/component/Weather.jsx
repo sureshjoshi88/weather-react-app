@@ -11,6 +11,7 @@ const [errorMsg, setErrorMsg] = useState('');
 
 
 
+
 const getweather = ()=>{
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${apiKey}&units=metric`;
       fetch(url)
@@ -28,9 +29,18 @@ const getweather = ()=>{
       console.log(error,'somthing went wrong please try again');
       setErrorMsg(error,'something went wrong')
       setData(null);
+      
 
     })
 }
+
+setTimeout(() => {
+  setErrorMsg('')
+}, 3000);
+
+setTimeout(() => {
+  setErrorMsg('')
+}, 3000);
   
 
   const submitButton=()=>{
@@ -49,6 +59,8 @@ const getweather = ()=>{
     }
   }
 
+
+
   return (
     <div className='img'>
       <p className='text-center font-medium text-2xl p-3'>Weather-app</p>
@@ -63,7 +75,7 @@ const getweather = ()=>{
             <p className='text-red-600 font-medium text-sm mb-2'>{errorMsg}</p>
           )}
         {data && (
-                 <div className='space-y-1'>
+                 <div className='space-y-1 p-2'>
               <p className='font-medium text-lg'>🌡 Temp: {data.main.temp} °C</p>
               <p className='font-medium text-lg'>💧 Humidity: {data.main.humidity} %</p>
               <p className='font-medium text-lg'>🌬 Air speed: {data.wind.speed} m/s</p>

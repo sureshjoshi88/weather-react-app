@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.img{
+    background-image: url('https://thumbs.dreamstime.com/b/blue-sky-white-cumulus-clouds-sunny-clear-day-panoramic-view-good-weather-background-generated-ai-352277442.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:100vh;
+    width:100%;
+}

@@ -21,16 +21,13 @@ const getweather = ()=>{
           setData(response)
           setErrorMsg('');
         }else{
-          setData(null);
           setErrorMsg(response.message);
+          setData(null);
         }
       })
       .catch ((error)=>{
       console.log(error,'somthing went wrong please try again');
       setErrorMsg(error,'something went wrong')
-      setData(null);
-      
-
     })
 }
 
@@ -38,9 +35,7 @@ setTimeout(() => {
   setErrorMsg('')
 }, 3000);
 
-setTimeout(() => {
-  setErrorMsg('')
-}, 3000);
+
   
 
   const submitButton=()=>{
@@ -85,7 +80,6 @@ setTimeout(() => {
             </div>
         )
       }
-      <p id='error'></p>
       </div>
       </div>
 

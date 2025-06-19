@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { memo } from 'react';
 
 const GithubSearch = () => {
     const [username, setUsername] = useState('');
@@ -73,4 +74,4 @@ const GithubSearch = () => {
     )
 }
 
-export default GithubSearch
+export default memo(GithubSearch)

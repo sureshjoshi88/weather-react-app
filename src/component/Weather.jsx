@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
@@ -88,4 +88,4 @@ setTimeout(() => {
   )
 }
 
-export default Weather
+export default memo(Weather)

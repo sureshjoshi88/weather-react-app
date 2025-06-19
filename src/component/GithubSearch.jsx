@@ -31,6 +31,7 @@ const GithubSearch = () => {
     }
   return (
     <div>
+        <p className='text-center text-2xl font-medium  p-2 '>Github Search App</p>
       <div className='flex justify-center mt-5 p-3 shadow bg-white'>
         <form action="" onSubmit={handleForm} className='flex gap-2'>
         <input className='border rounded p-2 w-100 cursor-pointer' value={username} onChange={(e)=>setUsername(e.target.value)} type="search" name="search" id="101" placeholder='Enter a Github Username'/>

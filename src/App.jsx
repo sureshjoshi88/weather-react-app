@@ -6,8 +6,8 @@ function App() {
 
   return (
    <>
-   {/* <Weather/> */}
-   <GithubSearch/>
+   <Weather/>
+   {/* <GithubSearch/> */}
 
   
    </>

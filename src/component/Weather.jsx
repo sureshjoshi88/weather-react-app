@@ -11,7 +11,6 @@ const [errorMsg, setErrorMsg] = useState('');
 
 
 
-
 const getweather = ()=>{
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${apiKey}&units=metric`;
       fetch(url)
@@ -62,8 +61,8 @@ setTimeout(() => {
       <div  className='flex justify-center mt-6'>
       <div className='bg-white p-2 rounded'>
          <div className='flex gap-2'>
-        <input type="search" className='border rounded h-8 w-70 p-1' onKeyDown={keypressEvent} value={cityname} onChange={(e)=>setCityName(e.target.value)} name="" id="input-wather" placeholder='Enter a CityName' />
-        <button className='bg-green-800 h-8 rounded p-1 text-white cursor-pointer' onClick={submitButton}>Get Weather</button>
+        <input type="search" className='border rounded h-9 w-70 p-1 font-semibold' onKeyDown={keypressEvent} value={cityname} onChange={(e)=>setCityName(e.target.value)} name="" id="input-wather" placeholder='Enter a CityName' />
+        <button className='bg-green-800 h-9 font-semibold rounded p-1 text-white cursor-pointer' onClick={submitButton}>Get Weather</button>
       </div>
 
         {errorMsg && (

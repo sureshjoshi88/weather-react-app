@@ -27,6 +27,9 @@ const getweather = ()=>{
       .catch ((error)=>{
       console.log(error,'somthing went wrong please try again');
       setErrorMsg(error,'something went wrong')
+    }).finally((err)=>{
+      console.log('a few menuite latter ',err);
+      
     })
 }
 
@@ -69,7 +72,7 @@ setTimeout(() => {
             <p className='text-red-600 font-medium text-sm mb-2'>{errorMsg}</p>
           )}
         {data && (
-                 <div className='space-y-1 p-2'>
+                 <div className='space-y-2 p-2'>
               <p className='font-medium text-lg'>🌡 Temp: {data.main.temp} °C</p>
               <p className='font-medium text-lg'>💧 Humidity: {data.main.humidity} %</p>
               <p className='font-medium text-lg'>🌬 Air speed: {data.wind.speed} m/s</p>
